@@ -16,6 +16,14 @@ type MenuCardProps = {
   label?: string;
 };
 
+type TestemonialCardProps = {
+  quote: string;
+  name: string;
+  role: string;
+  avatar: string;
+  dark: string;
+};
+
 const TopAppBar = () => (
   <header className="fixed top-0 w-full z-50 bg-[#fef8f5]/80 backdrop-blur-xl shadow-[0_32px_64px_-12px_rgba(29,27,26,0.06)] px-8 py-4 flex justify-between items-center max-w-7xl mx-auto left-1/2 -translate-x-1/2">
     <div className="flex items-center gap-2">
@@ -121,7 +129,13 @@ const MenuCard = ({ title, desc, price, image, label }: MenuCardProps) => (
   </div>
 );
 
-const TestimonialCard = ({ quote, name, role, avatar, dark }) => (
+const TestimonialCard = ({
+  quote,
+  name,
+  role,
+  avatar,
+  dark,
+}: TestemonialCardProps) => (
   <div
     className={`p-8 rounded-[2rem] ${dark ? "bg-[#361f1a] text-[#fef8f5]" : "bg-white text-[#361f1a]"} shadow-lg`}
   >
