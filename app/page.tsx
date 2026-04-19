@@ -8,6 +8,14 @@ import React from "react";
  * Typography: Noto Serif (Headings), Manrope (Body)
  */
 
+type MenuCardProps = {
+  title: string;
+  desc: string;
+  price: string | number;
+  image: string;
+  label?: string;
+};
+
 const TopAppBar = () => (
   <header className="fixed top-0 w-full z-50 bg-[#fef8f5]/80 backdrop-blur-xl shadow-[0_32px_64px_-12px_rgba(29,27,26,0.06)] px-8 py-4 flex justify-between items-center max-w-7xl mx-auto left-1/2 -translate-x-1/2">
     <div className="flex items-center gap-2">
@@ -88,7 +96,7 @@ const Heritage = () => (
   </section>
 );
 
-const MenuCard = ({ title, desc, price, image, label }) => (
+const MenuCard = ({ title, desc, price, image, label }: MenuCardProps) => (
   <div className="bg-white rounded-[2rem] p-4 shadow-[0_20px_40px_rgba(0,0,0,0.04)] hover:shadow-xl transition-shadow border border-[#e7e1df]">
     <div className="aspect-square rounded-2xl overflow-hidden mb-6">
       <img src={image} alt={title} className="w-full h-full object-cover" />
