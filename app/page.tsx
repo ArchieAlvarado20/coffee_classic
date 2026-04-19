@@ -21,7 +21,7 @@ type TestemonialCardProps = {
   name: string;
   role: string;
   avatar: string;
-  dark: string;
+  dark?: boolean;
 };
 
 const TopAppBar = () => (
@@ -134,7 +134,7 @@ const TestimonialCard = ({
   name,
   role,
   avatar,
-  dark,
+  dark = false,
 }: TestemonialCardProps) => (
   <div
     className={`p-8 rounded-[2rem] ${dark ? "bg-[#361f1a] text-[#fef8f5]" : "bg-white text-[#361f1a]"} shadow-lg`}
